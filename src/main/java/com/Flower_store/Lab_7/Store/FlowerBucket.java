@@ -1,13 +1,17 @@
 package com.Flower_store.Lab_7.Store;
 
-import lombok.Getter;
+import com.Flower_store.Lab_7.PayOrder.Item;
+
 
 import java.util.ArrayList;
 
-@Getter
-public class FlowerBucket {
+
+public class FlowerBucket extends Item{
+    public double price(){
+        return price;
+    }
     private ArrayList<FlowerPack> FlowerPacks=new ArrayList();
-    private int price=0;
+    private double price=0;
     public void add(FlowerPack flowerPack){
         FlowerPacks.add(flowerPack);
         price+= flowerPack.getPrice();
